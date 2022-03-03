@@ -7,8 +7,8 @@ const SearchPart2 = lazy(() => import('../components/Search/Part2'))
 let IndexPage = () => {
     return (
         <>
-            <Menu />
-        <Box bg='blue.50' py='40px' minHeight='100vh'>
+        <Menu />
+        <Box bg='cyan.50' py='40px' minHeight='100vh'>
             <Container maxW='container.xl'  >
                 <Grid
                     marginTop=""

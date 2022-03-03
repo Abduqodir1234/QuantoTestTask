@@ -4,16 +4,14 @@ import {
     DrawerBody, 
     DrawerCloseButton, 
     DrawerContent, 
-    DrawerFooter, 
     DrawerHeader, 
     DrawerOverlay, 
-    Input,
     MenuButton,
     Menu,
     IconButton,
     Box
 } from "@chakra-ui/react";
-import image from '../../public/menu.png'
+import image from '../../public/hamburger.png'
 import { useState } from "react";
 import SearchPart1 from "../Search/Part1";
 
@@ -26,15 +24,15 @@ let MobileMenu = () =>{
         setopen(false)
     }
     return(
-    <Box display={{base:'block',md:'block',lg:'none',xl:"none"}} >
+    <Box display={{base:'flex',md:'flex',lg:'none',xl:"none"}} alignItems='center' padding='10px' height='60px' shadow='md'  >
       <Menu>
-          <MenuButton
-            onClick={onOpen}
-            as={IconButton}
-            aria-label='Options'
-            icon={<img src={image} width={30} height={30} />}
-            variant='outline'
-          />
+        <MenuButton
+          onClick={onOpen}
+          as={IconButton}
+          aria-label='Options'
+          icon={<img src={image} width={30} height={30} />}
+          variant='outline'
+        />
       </Menu>
       <Drawer
         isOpen={isOpen}
