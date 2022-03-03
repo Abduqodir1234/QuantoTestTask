@@ -24,6 +24,7 @@ let BodyPart :FC<BodyPartProps>= ({
                     width='100%'
                     fontWeight='bold'
                     color='blackAlpha.800'
+                    fontSize={{base:'small',md:'normal',lg:'normal',xl:'normal'}}
                 >
                     {body}
                 </Text>

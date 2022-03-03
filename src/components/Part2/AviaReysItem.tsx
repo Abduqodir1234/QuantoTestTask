@@ -22,7 +22,7 @@ const items = [
     },
     {
         title1:'V puti',
-        body1:'21 soat 15minut'
+        body1:'21 s 15m'
     },
     {
         title1:'Peresadki',
@@ -34,7 +34,7 @@ const items = [
     },
     {
         title1:'V puti',
-        body1:'21 soat 15minut'
+        body1:'21 s 15m'
     },
     {
         title1:'Peresadki',
