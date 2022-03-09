@@ -1,9 +1,14 @@
-import { Box, Checkbox, Text } from "@chakra-ui/react"
-import { useState } from "react"
+import { Box, Text } from "@chakra-ui/react"
+import { FC } from "react"
 import CustomCheckBox from "../Part1/CheckBox"
 
-let SearchPart1 = () => {
-    let [filter,setfilter] = useState([''])
+interface SearchPart1Props{
+    filter:any;
+    setfilter:any
+}
+
+
+let SearchPart1:FC<SearchPart1Props> = ({filter,setfilter}) => {
     const handleChange = (text:string) =>{
         let main = [...filter]
         let index = main.indexOf(text)
@@ -41,27 +46,32 @@ let SearchPart1 = () => {
                 <CustomCheckBox
                     handleChange={handleChange}
                     isExist={(e)=>isExist(e)}
+                    value=''
                     text='Все'
                  /> 
                  <CustomCheckBox
                     handleChange={handleChange}
                     isExist={(e)=>isExist(e)}
+                    value='0'
                     text='Без пeресaдoк'
                  />
                  <CustomCheckBox
                     handleChange={handleChange}
                     isExist={(e)=>isExist(e)}
                     text='1 пересадка'
+                    value="1"
                  />
                  <CustomCheckBox
                     handleChange={handleChange}
                     isExist={(e)=>isExist(e)}
                     text='2 пересадка'
+                    value="2"
                  />
                  <CustomCheckBox
                     handleChange={handleChange}
                     isExist={(e)=>isExist(e)}
                     text='3 пересадка'
+                    value="3"
                  />
                  
             </Box>

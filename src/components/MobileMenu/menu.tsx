@@ -12,10 +12,17 @@ import {
     Box
 } from "@chakra-ui/react";
 import image from '../../public/hamburger.png'
-import { useState } from "react";
+import { FC, useState } from "react";
 import SearchPart1 from "../Search/Part1";
 
-let MobileMenu = () =>{
+
+interface MobileMenuProps{
+  filter:any;
+  setfilter:any
+}
+
+
+let MobileMenu:FC<MobileMenuProps> = ({filter,setfilter}) =>{
     const [isOpen,setopen] = useState<boolean>(false)
     const onOpen = () =>{
         setopen(true)
@@ -45,7 +52,7 @@ let MobileMenu = () =>{
           <DrawerHeader></DrawerHeader>
 
           <DrawerBody>
-            <SearchPart1 />
+            <SearchPart1 filter={filter} setfilter={(e:any)=>setfilter(e)} />
           </DrawerBody>
 
         </DrawerContent>

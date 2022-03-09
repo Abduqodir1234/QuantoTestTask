@@ -1,7 +1,13 @@
 import { GridItem, Image, Text } from "@chakra-ui/react"
-import { Fragment } from "react"
+import { FC, Fragment } from "react"
 
-let HeadPart = () => {
+
+interface HeadPartProps{
+    price:number
+}
+
+
+let HeadPart:FC<HeadPartProps> = ({price}) => {
     return(
         <Fragment>
         <GridItem  colSpan={9} mb='20px' >
@@ -11,7 +17,7 @@ let HeadPart = () => {
                 fontWeight='bold'
                 letterSpacing='3px'
             >
-                1400$
+                {price} ₽
             </Text>
         </GridItem>
         <GridItem   colSpan={3} >
