@@ -24,13 +24,14 @@ let BodyPart :FC<BodyPartProps>= ({
                 <Text 
                     textTransform='uppercase'
                     color='gray.400'
+                    fontSize={{base:'small',sm:'small',md:'normal',lg:'normal',xl:'normal'}}
                 >
                     {mow_hkt_name}
                     <Text 
                         width='100%'
                         fontWeight='bold'
                         color='blackAlpha.800'
-                        fontSize={{base:'small',md:'normal',lg:'normal',xl:'normal'}}
+                        fontSize={{base:'small',sm:'small',md:'normal',lg:'normal',xl:'normal'}}
                     >
                         {mow_hkt}
                     </Text>
@@ -40,20 +41,22 @@ let BodyPart :FC<BodyPartProps>= ({
                 <Text 
                     textTransform='uppercase'
                     color='gray.400'
+                    fontSize={{base:'small',sm:'small',md:'normal',lg:'normal',xl:'normal'}}
                 >
                     В пyти
                     <Text 
                         width='100%'
                         fontWeight='bold'
                         color='blackAlpha.800'
-                        fontSize={{base:'small',md:'normal',lg:'normal',xl:'normal'}}
+                        fontSize={{base:'small',sm:'small',md:'normal',lg:'normal',xl:'normal'}}
                     >
                         {times} m
                     </Text>
                 </Text>
             </GridItem>
             <GridItem  colSpan={4} >
-                <Text 
+                <Text
+                    fontSize={{base:'small',sm:'small',md:'normal',lg:'normal',xl:'normal'}}
                     textTransform='uppercase'
                     color='gray.400'
                 >
@@ -62,7 +65,7 @@ let BodyPart :FC<BodyPartProps>= ({
                         width='100%'
                         fontWeight='bold'
                         color='blackAlpha.800'
-                        fontSize={{base:'small',md:'normal',lg:'normal',xl:'normal'}}
+                        fontSize={{base:'small',sm:'small',md:'normal',lg:'normal',xl:'normal'}}
                     >
                         {change.map((one:any)=>one+" ")}
                     </Text>

@@ -5,15 +5,16 @@ import SearchPart2ButtonGroup from "../Part2/ButtonGroup"
 
 
 interface SearchPart2Props{
-    data:any
+    data:any;
+    filter:any;
+    setfilter:any;
 }
 
 
-let SearchPart2:FC<SearchPart2Props> = ({data}) => {
-    console.log(data)
+let SearchPart2:FC<SearchPart2Props> = ({data,filter,setfilter}) => {
         return(
             <Box>
-                <SearchPart2ButtonGroup />
+                <SearchPart2ButtonGroup filter={filter} setfilter={(e:any)=>setfilter(e)}  />
                 {data?.map((one:any,ind:number)=>(
                     <AviaReysItem
                         price={one.price}
