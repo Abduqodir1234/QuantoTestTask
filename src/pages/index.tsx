@@ -13,7 +13,7 @@ let IndexPage = () => {
     let [mainData,setmaindata] = useState({data:[],stop:false})
     const part1:any = useSearchPart1()
     const searchId = part1?.data?.data?.searchId
-    const part2:any = useSearchPart2(searchId,{enabled:!!searchId,refetchOnWindowFocus: false,})
+    const part2:any = useSearchPart2(searchId,{enabled:!!searchId,refetchOnWindowFocus: false})
     useEffect(()=>{
         if(!part2?.data?.data?.stop){
             part2.refetch()
